@@ -1,7 +1,7 @@
 const colorSpan = document.querySelector('.color');
 const changeColorButton = document.querySelector('.change-color');
 
-changeColorButton.addEventListener ('click', function () {
+changeColorButton.addEventListener('click', function () {
     const newColor = getRandomHexColor();
 
     document.body.style.backgroundColor = newColor;
