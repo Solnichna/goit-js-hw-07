@@ -4,11 +4,7 @@ const nameOutput = document.getElementById ('name-output');
 nameInput.addEventListener ('input', updateName);
 
 function updateName () {
-    const enteredName = nameInput.ariaValueMax.trim();
-
-    if (enteredName === '') {
-        nameOutput.textContent = 'Anonymous';
-    } else {
-        nameOutput.textContent = enteredName;
-    }
-}
+    const inputValue = nameInput.value.trim();
+    const outputName = inputValue === '' ? 'Anonymous' : inputValue;
+    nameOutput.textContent = outputName;
+  }
