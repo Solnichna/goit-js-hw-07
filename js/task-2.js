@@ -25,16 +25,14 @@ const images = [
     },
   ];
 
-  const galleryList = document.querySelector('.gallery');
+  const galleryElement = document.querySelector('.gallery');
+
+  const fragment = document.createDocumentFragment();
 
   images.forEach(image => {
-    const galleryItem = document.createElement('li');
-    galleryItem.classList.add('gallery-item');
-
-    const imgElement = document.createElement('img');
-    imgElement.src = image.url;
-    imgElement.alt = image.alt;
-
-    galleryItem.appendChild(imgElement);
-    galleryList.appendChild(galleryItem);
+    const liElement = document.createElement('li');
+    liElement.innerHTML = `<img src="${image.src}" alt="${image.alt}">`;
+    fragment.appendChild(liElement);
   });
+
+  galleryElement.appendChild(fragment);
