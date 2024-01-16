@@ -31,7 +31,8 @@ const images = [
 
   images.forEach(image => {
     const liElement = document.createElement('li');
-    liElement.innerHTML = `<img src="${image.src}" alt="${image.alt}">`;
+    liElement.className = "gallery-item";
+    liElement.innerHTML = `<img class="gallery-img" src="${image.url}" alt="${image.alt}">`;
     fragment.appendChild(liElement);
   });
 
